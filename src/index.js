@@ -27,11 +27,15 @@ global.tasks = [
     {
         id: 1,
         taskTitle: 'First task1',
-        description: 'This is my first task'
+        description: 'This is my first task',
+        completed: false, //incomplete ,
+        dueDate: '06/20/2020'
     },
     {
         id: 2,
         taskTitle: 'Second task',
-        description: 'This is my second task'
+        description: 'This is my second task',
+        completed: false,
+        dueDate: '08/20/2021'
     }
 ];

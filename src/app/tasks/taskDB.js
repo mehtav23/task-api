@@ -29,10 +29,18 @@ function taskDB() {
         }
     }
 
+    function completeTask(id) {
+        const taskToBeCompleted = tasks.filter(item => item.id === id);
+        taskToBeCompleted[0].completed = true;
+        console.log('Successfully updated the task');
+        return 1;
+    }
+
     return {
         getAllTask,
         createTask,
-        deleteTask
+        deleteTask,
+        completeTask
     }
 }
 
