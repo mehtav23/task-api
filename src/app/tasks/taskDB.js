@@ -1,7 +1,7 @@
 
 function taskDB() {
     function getAllTask(id) {
-        if(id) {
+        if (id) {
             const result = tasks.filter(item => item.id === id);
             return result;
         }
@@ -17,16 +17,11 @@ function taskDB() {
     }
 
     function deleteTask(id) {
-        const taskToBeDeleted = tasks.filter(item => item.id === id);
-        if (taskToBeDeleted.length > 0) {
-            tasks = tasks.filter((item) => {
-                return item.id !== id;
-            });
-            console.log(`Deleted task successfully`);
-            return;
-        } else {
-            return 0;
-        }
+        tasks = tasks.filter((item) => {
+            return item.id !== id;
+        });
+        console.log(`Deleted task successfully`);
+        return;
     }
 
     function completeTask(id) {

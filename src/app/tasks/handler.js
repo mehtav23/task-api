@@ -70,7 +70,7 @@ function handler() {
         const taskToBeDeleted = taskDB.getAllTask(id);
         if (taskToBeDeleted.length) {
             const data = taskDB.deleteTask(id);
-            send({ status: 200, message:  'Task deleted successfully'});
+            res.send({ status: 200, message:  'Task deleted successfully'});
             return;
         } else {
             res.send({ status: 404, message: 'Record not found' });
